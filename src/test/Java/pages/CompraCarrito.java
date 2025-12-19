@@ -113,6 +113,8 @@ public class CompraCarrito extends BasePage{
 
         Thread.sleep(4000);
 
+        driver.close();
+
     }
 }
 

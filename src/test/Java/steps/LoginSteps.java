@@ -1,19 +1,20 @@
 package steps;
 
 import io.cucumber.java.en.*;
-import pages.BorrarDireccion;
-import pages.CierraPagina;
-import pages.CompraCarrito;
-import pages.LoginPage;
+import org.openqa.selenium.WebDriver;
+import pages.*;
 
 
-
-public class LoginSteps  {
+public class LoginSteps  extends BasePage {
 
         LoginPage loginPage = new LoginPage();
         CompraCarrito compra = new CompraCarrito();
         BorrarDireccion DeleteAdrees = new BorrarDireccion();
         CierraPagina CloseBrowser = new CierraPagina();
+
+    public LoginSteps() {
+        super(driver);
+    }
 
 
     @Given("Ir a DemoWebShop e iniciar sesion")
@@ -30,6 +31,7 @@ public class LoginSteps  {
     public void BorrarDireccion() throws InterruptedException {
     DeleteAdrees.DeleteAdress();
     }
+
 
     @Then("Compra exitosa y cierra la pagina actual")
     public void CierraPagina(){

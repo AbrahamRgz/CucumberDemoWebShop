@@ -6,7 +6,7 @@ Feature: Flujo completo de DemoWebShop
   Scenario: Compra End to End
     Given Ir a DemoWebShop e iniciar sesion
     When completar compra y validar datos
-    Then Compra exitosa y cierra la pagina actual
+    #Then Compra exitosa y cierra la pagina actual
 
 
   Scenario: Borrar Direccion
